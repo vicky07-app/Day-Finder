@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day Finder | Chronos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-effects">
+        <div class="glow-orb orb-1"></div>
+        <div class="glow-orb orb-2"></div>
+        <div class="grid-overlay"></div>
+    </div>
+
+    <main class="container">
+        <div class="glass-card">
+            <header class="card-header">
+                <h1>Day Finder</h1>
+                <p>Enter a date to reveal its day.</p>
+            </header>
+
+            <form id="day-form" class="input-group">
+                <div class="input-wrapper">
+                    <label for="date-input">Date</label>
+                    <input type="number" id="date-input" placeholder="DD" min="1" max="31" required>
+                </div>
+                
+                <div class="input-wrapper">
+                    <label for="month-input">Month</label>
+                    <input type="number" id="month-input" placeholder="MM" min="1" max="12" required>
+                    <span class="input-hint">1-12</span>
+                </div>
+
+                <div class="input-wrapper">
+                    <label for="year-input">Year</label>
+                    <input type="number" id="year-input" placeholder="YYYY" min="1" required>
+                </div>
+
+                <button type="submit" class="find-btn">
+                    <span class="btn-text">Find Day</span>
+                    <span class="btn-glow"></span>
+                </button>
+            </form>
+
+            <div id="result-display" class="result-container hidden">
+                <div class="result-content">
+                    <span class="label">That day was a</span>
+                    <h2 id="day-output" class="day-text">Sunday</h2>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
